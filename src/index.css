@@ -12,6 +12,83 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  /* Paleta de cores principal */
+  --Casal: #306e5f;
+	--Goblin: #3f8457;
+	--Pine_Glade: #b4c28b;
+	--Periglacial_Blue: #e7e7da;
+	--Gray_Nurse: #f9f9f9;
+
+  /* Variação das cores principais */
+  --Casal-1: #2b6356;
+  --Casal-2: #26584c;
+  --Casal-3: #224d43;
+  --Casal-4: #1d4239;
+  --Casal-5: #183730;
+  --Casal-6: #132c26;
+  --Casal-7: #0e211c;
+  --Casal-8: #0a1613;
+ 
+  --Goblin-1: #39774e;
+  --Goblin-2: #326a46;
+  --Goblin-3: #2c5f40;
+  --Goblin-4: #26543a;
+  --Goblin-5: #204934;
+  --Goblin-6: #1a3e2e;
+  --Goblin-7: #143328;
+  --Goblin-8: #0f2822;
+
+  --Pine_Glade-1: #b4c28b;
+  --Pine_Glade-2: #a9b780;
+  --Pine_Glade-3: #9eb075;
+  --Pine_Glade-4: #93a56a;
+  --Pine_Glade-5: #889a60;
+  --Pine_Glade-6: #7d8f55;
+  --Pine_Glade-7: #72844b;
+  --Pine_Glade-8: #677941;
+
+  --Periglacial_Blue-1: #e7e7da;
+  --Periglacial_Blue-2: #dcdcce;
+  --Periglacial_Blue-3: #d0d0d0;
+  --Periglacial_Blue-4: #c5c5c5;
+  --Periglacial_Blue-5: #b9b9b9;
+  --Periglacial_Blue-6: #adadad;
+  --Periglacial_Blue-7: #a2a2a2;
+  --Periglacial_Blue-8: #979797;
+
+  --Gray_Nurse-1: #f9f9f9;
+  --Gray_Nurse-2: #eeeeee;
+  --Gray_Nurse-3: #e0e0e0;
+  --Gray_Nurse-4: #c9c9c9;
+  --Gray_Nurse-5: #b1b1b1;
+  --Gray_Nurse-6: #999999;
+  --Gray_Nurse-7: #808080;
+  --Gray_Nurse-8: #666666;
+  
+  /* Paleta de cores secundarias */
+  --Dark_Red: #8b0000;
+  --Dark_Green: #008b00;
+  --Dark_Blue: #00008b;
+  --Dark_Yellow: #8b8b00;
+  --Dark_Purple: #8b008b;
+  --Dark_Cyan: #008b8b;
+  --Dark_Orange: #8b4500;
+
+  /* Paleta de cores terciarias */
+  --Light_Red: #ff0000;
+  --Light_Green: #00ff00;
+  --Light_Blue: #0000ff;
+  --Light_Yellow: #ffff00;
+  --Light_Purple: #ff00ff;
+  --Light_Cyan: #00ffff;
+
+  /* Escala de Cinza */
+  --Black: #000000;
+  --Gray: #808080;
+  --Dark_Gray: #a9a9a9;
+  --Light_Gray: #d3d3d3;
+  --White: #ffffff;
 }
 
 body {
