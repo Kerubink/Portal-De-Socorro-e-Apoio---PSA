@@ -1,0 +1,61 @@
+.section {
+    position: sticky;
+    height: 550px;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.041);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    z-index: 50;
+  
+    .container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .about_text {
+      position: relative;
+      z-index: 10; 
+      color: var(--text-color);
+      text-align: center;
+    }
+  }
+  
+  .background_slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 20s infinite;
+  }
+  
+  @keyframes slideshow {
+    0% {
+      background-image: url('https://imagens.ebc.com.br/mIP74J5qtx0y5da18zxaj03tBdo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/lajeado_1.jpg?itok=W1tRy1Qm');
+    }
+    25% {
+      background-image: url('https://averdade.org.br/wp-content/uploads/2023/11/chuva-RS-1068x639.jpeg');
+    }
+    50% {
+      background-image: url('https://imagens.ebc.com.br/Bo2CZEwo__pTZ5MQ_szk6erMRn4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/07/chuva_no_rio_grande_do_sul1.jpg?itok=QEf3TSZp');
+    }
+    75% {
+      background-image: url('https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/05/chuvarscidade.jpg?w=1220&h=674&crop=1');
+    }
+    100% {
+      background-image: url('https://imagens.ebc.com.br/IpAIRyDDbkhKPYn35btZbw2rvX0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/06/53700251742_862a142f49_o.jpg?itok=GN_d7BMk');
+    }
+  }
+  

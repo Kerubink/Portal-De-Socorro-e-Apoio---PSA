@@ -1,0 +1,19 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  z-index: 100;
+}
+.header.scrolled {
+  background-color: var(--background-color);
+}
+.logo {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 10rem;
+}
