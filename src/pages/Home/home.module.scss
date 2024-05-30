@@ -1,61 +1,100 @@
-.section {
-    position: sticky;
-    height: 550px;
-    overflow: hidden;
-    margin: 20px;
-    border-radius: 2rem;
-    background-color: rgba(0, 0, 0, 0.041);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(9px);
-    border: 1px solid rgba(0, 0, 0, 0.01);
-    z-index: 50;
-  
-    .container {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .about_text {
-      position: relative;
-      z-index: 10; 
-      color: var(--text-color);
-      text-align: center;
-    }
-  }
-  
-  .background_slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
+.home {
+    background-image: url(../../assets/ai-generated-8273256.jpg);
     background-size: cover;
-    background-position: center;
-    animation: slideshow 20s infinite;
-  }
+    backdrop-filter: blur(2px);
+    align-items: center;
+    gap: 1rem;
+}
+
+.content h1,
+.content span{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.content h1::after,
+.content span::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+  transform: translateX(-101%);
+}
+
+.content h1::before,
+.content span::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--Gray_Nurse-4);
+  animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+  transform: translateX(0);
+}
+
+.content h1:nth-of-type(1)::before,
+.content h1:nth-of-type(1)::after,
+.content span:nth-of-type(1)::before,
+.content span:nth-of-type(1)::after{
+  animation-delay: 1s;
+}
+
+.content h1:nth-of-type(2)::before,
+.content h1:nth-of-type(2)::after,
+.content span:nth-of-type(2)::before,
+.content span:nth-of-type(2)::after{
+  animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+  0% {transform: translateX(-100%)}
+  100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+  0% {transform: translateX(0)}
+  100% {transform: translateX(200%)}
+}
+
+
+.details {
+    align-items: center;
+    overflow-x: auto;
+    height: 40%; 
+    width: 100%; 
   
-  @keyframes slideshow {
-    0% {
-      background-image: url('https://imagens.ebc.com.br/mIP74J5qtx0y5da18zxaj03tBdo=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/lajeado_1.jpg?itok=W1tRy1Qm');
-    }
-    25% {
-      background-image: url('https://averdade.org.br/wp-content/uploads/2023/11/chuva-RS-1068x639.jpeg');
-    }
-    50% {
-      background-image: url('https://imagens.ebc.com.br/Bo2CZEwo__pTZ5MQ_szk6erMRn4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/07/chuva_no_rio_grande_do_sul1.jpg?itok=QEf3TSZp');
-    }
-    75% {
-      background-image: url('https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/05/chuvarscidade.jpg?w=1220&h=674&crop=1');
-    }
-    100% {
-      background-image: url('https://imagens.ebc.com.br/IpAIRyDDbkhKPYn35btZbw2rvX0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/05/06/53700251742_862a142f49_o.jpg?itok=GN_d7BMk');
+    .details_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: baseline;
+      min-width: 250px; 
+      padding: 1rem;
+      flex: none; 
+      width: 100%;
+      height: 100%; 
+  
+      @media (min-width: 400px) {
+        width: 50%; 
+      }
+      @media (min-width: 768px) {
+        width: 33.33%; 
+      }
+      @media (min-width: 1024px) {
+        width: 25%;
+        flex: 1; 
+      }
     }
   }
+
+
   

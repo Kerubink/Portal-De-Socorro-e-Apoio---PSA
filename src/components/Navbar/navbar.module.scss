@@ -1,12 +1,18 @@
+@function background-color() {
+  @return var(--bg-header);
+}
+
 .header {
-  position: sticky;
+  position: fixed;
+  box-sizing: border-box;
+  width: calc(100% - 1rem);
+  margin: 0.5rem;
+  border-radius: 1rem;
   top: 0;
-  background-color: transparent;
+  background-color: background-color();
   z-index: 100;
 }
-.header.scrolled {
-  background-color: var(--background-color);
-}
+
 .logo {
   height: 2rem;
   display: flex;

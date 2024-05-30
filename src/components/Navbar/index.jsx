@@ -4,15 +4,6 @@ import logoHorizontal from "../../assets/logoHorizontal.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  document.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-  
   useEffect(() => {
     const html = document.querySelector('html');
     const storedTheme = localStorage.getItem('hs_theme');
@@ -50,20 +41,18 @@ function Navbar() {
     document.querySelector('.hs-dark-mode-inactive').classList.toggle('hidden', theme === 'dark');
   };
 
-
-
   return (
     <>
-      <header className={`${styles.header} flex flex-wrap sm:justify-start sm:flex-nowrap text-sm py-4`}>
+      <header className={`${styles.header} flex flex-wrap backdrop-blur-sm sm:justify-start sm:flex-nowrap text-sm py-4`}>
         <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
-          <Link className={`${styles.logo} text-xl font-semibold dark:text-white overflow-hidden`} to="#">
+          <Link className={`${styles.logo} text-xl font-semibold dark:text-white overflow-hidden`} to="/">
             <img src={logoHorizontal} alt="Logomarca" />
           </Link>
           <div className="flex flex-row items-center gap-5 mt-5 sm:justify-end sm:mt-0 sm:ps-5">
-            <Link className="font-medium text-blue-500" to="/">
+            <Link className="font-medium" to="/">
               Inicio
             </Link>
-            <Link className="font-medium text-blue-500" to="/Sobre">
+            <Link className="font-medium" to="/Sobre">
               Sobre
             </Link>
             <button
