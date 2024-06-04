@@ -1,3 +1,5 @@
+@import url('https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
 @function background-color() {
   @return var(--bg-header);
 }
@@ -11,6 +13,12 @@
   top: 0;
   background-color: background-color();
   z-index: 1;
+
+  @media (max-width: 400px) {
+    &.donationspage {
+      display: none !important;
+    }
+  }
 }
 
 .logo {
@@ -23,3 +31,4 @@
 .logo img {
   height: 10rem;
 }
+

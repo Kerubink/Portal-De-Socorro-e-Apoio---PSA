@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react';
-import styles from "./navbar.module.scss";
-import logoHorizontal from "../../assets/logoHorizontal.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+import styles from './navbar.module.scss';
+import logoHorizontal from '../../assets/logoHorizontal.png';
+import Navbotton from './navbotton';
 
 function Navbar() {
+  const location = useLocation();
+  const isMobile = useMediaQuery({ query: '(max-width: 400px)' });
+
+
   useEffect(() => {
     const html = document.querySelector('html');
     const storedTheme = localStorage.getItem('hs_theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     const isLightOrAuto = storedTheme === 'light' || (storedTheme === 'auto' && !prefersDark);
     const isDarkOrAuto = storedTheme === 'dark' || (storedTheme === 'auto' && prefersDark);
 
@@ -25,7 +31,6 @@ function Navbar() {
 
   const handleThemeSwitch = (theme) => {
     const html = document.querySelector('html');
-    const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
 
     if (theme === 'dark') {
       html.classList.remove('light');
@@ -43,7 +48,7 @@ function Navbar() {
 
   return (
     <>
-      <header className={`${styles.header} flex flex-wrap backdrop-blur-sm sm:justify-start sm:flex-nowrap text-sm py-4`}>
+      <header className={`${styles.header} flex flex-wrap backdrop-blur-sm sm:justify-start sm:flex-nowrap text-sm py-4 ${location.pathname === '/Doacoes' && isMobile ? styles.donationspage : ''}`}>
         <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
           <Link className={`${styles.logo} text-xl font-semibold dark:text-white overflow-hidden`} to="/">
             <img src={logoHorizontal} alt="Logomarca" />
@@ -52,8 +57,8 @@ function Navbar() {
             <Link className="font-medium" to="/">
               Inicio
             </Link>
-            <Link className="font-medium" to="/Sobre">
-              Sobre
+            <Link className="font-medium" to="/Doacoes">
+              Doar
             </Link>
             <button
               type="button"
@@ -84,6 +89,8 @@ function Navbar() {
           </div>
         </nav>
       </header>
+
+      {location.pathname === '/Doacoes' && isMobile && <Navbotton />}
     </>
   );
 }

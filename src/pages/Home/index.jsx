@@ -7,6 +7,7 @@ import iconClothing from "../../assets/icons/guarda-roupa.png"
 import iconFoods from "../../assets/icons/doacao-de-alimentos.png"
 import iconServices from "../../assets/icons/servicos-profissionais.png"
 import imgVolunteer from "../../assets/group-different-people-volunteering-foodbank-poor-people.jpg"
+import SlideInfinite from '../../components/Slides';
 
 function Home() {
 
@@ -57,7 +58,7 @@ function Home() {
               <span className="text-xl">Valores arrecadados</span>
             </div>
             <div className={`${styles.detailds_text}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, provident hic dolor quia enim libero? Eaque dolo</div>
-            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center text-sm font-medium rounded-3xl border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center text-sm font-medium rounded-3xl border border-gray-200 bg-orange-400 text-white shadow-sm hover:bg-orange-500 disabled:opacity-50 disabled:pointer-events-none">
               Saiba mais
             </button>
           </div>
@@ -69,7 +70,7 @@ function Home() {
               <span className="text-xl">Roupas recebidas</span>
             </div>
             <div className={`${styles.detailds_text}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, provident hic dolor quia enim libero? Eaque dolo</div>
-            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center  text-sm font-medium rounded-3xl border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center  text-sm font-medium rounded-3xl border border-gray-200 bg-orange-400 text-white shadow-sm hover:bg-orange-500 disabled:opacity-50 disabled:pointer-events-none">
               Saiba mais
             </button>
           </div>
@@ -81,7 +82,7 @@ function Home() {
               <span className="text-xl">Alimentos</span>
             </div>
             <div className={`${styles.detailds_text}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, provident hic dolor quia enim libero? Eaque dolo</div>
-            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center  text-sm font-medium rounded-3xl border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center  text-sm font-medium rounded-3xl border border-gray-200 bg-orange-400 text-white shadow-sm hover:bg-orange-500 disabled:opacity-50 disabled:pointer-events-none">
               Saiba mais
             </button>
           </div>
@@ -93,7 +94,7 @@ function Home() {
               <span className="text-xl">Serviços</span>
             </div>
             <div className={`${styles.detailds_text}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, provident hic dolor quia enim libero? Eaque dolo</div>
-            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center  text-sm font-medium rounded-3xl border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+            <button type="button" className="py-3 px-4 w-1/2 inline-flex items-center justify-center  text-sm font-medium rounded-3xl border border-gray-200 bg-orange-400 text-white shadow-sm hover:bg-orange-500 disabled:opacity-50 disabled:pointer-events-none">
               Saiba mais
             </button>
           </div>
@@ -118,7 +119,7 @@ function Home() {
         {/* Janela modal do about */}
         <div id="hs-medium-modal" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none">
           <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all md:max-w-2xl md:w-full m-3 md:mx-auto h-[calc(100%-3.5rem)]">
-            <div class="max-h-full  overflow-hidden flex flex-col border shadow-sm rounded-xl pointer-events-auto backdrop-blur-sm">
+              <div class={`${styles.content_modal} max-h-full overflow-hidden flex flex-col border shadow-sm rounded-xl pointer-events-auto`}>
               <div class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700">
                 <h3 class="font-bold text-gray-800 dark:text-white">
                   Sobre a PSA
@@ -172,12 +173,10 @@ function Home() {
         </div>
 
       </section>
-      <section className="bg-slate-300 h-screen">
-        a 
-      </section>
-
-
-    
+      <section className={`${styles.services} bg-slate-900 h-screen flex items-center`}>
+        <SlideInfinite />
+      </section> 
+      <section className={`bg-blue h-screen`}></section>
     </>
   );
 }
